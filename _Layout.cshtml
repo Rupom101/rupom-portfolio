@@ -1,0 +1,173 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <meta name="description"
+          content="Mr Rupom Ahmed - ASP.NET Web Developer Portfolio" />
+
+    <title>Mr Rupom Ahmed | ASP.NET Web Developer</title>
+
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+
+</head>
+
+<body>
+
+    <!-- Scroll Progress -->
+    <div id="scrollProgress"></div>
+
+    <!-- Animated Background -->
+    <div class="background-animation">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+
+
+    <!-- NAVBAR -->
+    <header>
+
+        <nav class="navbar">
+
+            <a class="logo"
+               asp-controller="Home"
+               asp-action="Index">
+
+                Rupom<span>.</span>
+
+            </a>
+
+
+            <ul class="nav-links" id="navLinks">
+
+                <li>
+                    <a href="#home">Home</a>
+                </li>
+
+                <li>
+                    <a href="#about">About</a>
+                </li>
+
+                <li>
+                    <a href="#education">Education</a>
+                </li>
+
+                <li>
+                    <a href="#skills">Skills</a>
+                </li>
+
+                <li>
+                    <a href="#services">Services</a>
+                </li>
+
+                <li>
+                    <a href="#projects">Projects</a>
+                </li>
+
+                <li>
+                    <a href="#contact">Contact</a>
+                </li>
+
+            </ul>
+
+
+            <div class="nav-buttons">
+
+                <button id="themeToggle"
+                        class="icon-button"
+                        title="Change Theme">
+
+                    🌙
+
+                </button>
+
+
+                <button id="menuButton"
+                        class="menu-button">
+
+                    ☰
+
+                </button>
+
+            </div>
+
+        </nav>
+
+    </header>
+
+
+    <!-- PAGE CONTENT -->
+
+    <main>
+
+        @RenderBody()
+
+    </main>
+
+
+    <!-- FOOTER -->
+
+    <footer>
+
+        <div class="footer-content">
+
+            <h2>Mr Rupom Ahmed<span>.</span></h2>
+
+            <p>
+                 Web Site Developer
+            </p>
+
+            <div class="footer-social">
+
+                <a href="https://www.facebook.com/mdrupomahmed.rj?mibextid=ZbWKwL"
+                   target="_blank"
+                   rel="noopener noreferrer">
+                    Facebook
+                </a>
+
+                <a href="mailto:rupom129@gmail.com">
+                    Email
+                </a>
+
+                <a href="https://wa.me/8801991003861?text=Hello%20Mr%20Rupom%20Ahmed%2C%20I%20visited%20your%20profile%20website."
+                   target="_blank"
+                   rel="noopener noreferrer">
+                    WhatsApp
+                </a>
+
+            </div>
+
+            <p class="copyright">
+                © 2026 Mr Rupom Ahmed. All Rights Reserved.
+            </p>
+
+        </div>
+
+    </footer>
+
+
+    <!-- Back To Top -->
+
+    <button id="backToTop"
+            title="Back to Top">
+
+        ↑
+
+    </button>
+
+
+    <script src="~/js/site.js" asp-append-version="true"></script>
+
+    @await RenderSectionAsync("Scripts", required: false)
+
+</body>
+
+</html>
