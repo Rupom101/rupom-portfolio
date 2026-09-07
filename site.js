@@ -1,56 +1,99 @@
-﻿document.addEventListener("DOMContentLoaded", function () {
+document.addEventListener("DOMContentLoaded", function () {
+
+    /* ================= PAGE LOADER ================= */
+
+    const pageLoader = document.getElementById("pageLoader");
+
+    document.body.classList.add("no-scroll");
+
+    window.addEventListener("load", function () {
+
+        setTimeout(function () {
+
+            if (pageLoader) {
+                pageLoader.classList.add("hide");
+            }
+
+            document.body.classList.remove("no-scroll");
+
+            document.querySelectorAll(".hero .reveal")
+                .forEach(function (element) {
+
+                    element.classList.add("show");
+
+                });
+
+        }, 1800);
+
+    });
 
 
     /* ================= MOBILE MENU ================= */
 
-    const menuButton = document.getElementById("menuButton");
-    const navLinks = document.getElementById("navLinks");
+    const menuButton =
+        document.getElementById("menuButton");
 
-    if (menuButton) {
+    const navLinks =
+        document.getElementById("navLinks");
+
+
+    if (menuButton && navLinks) {
 
         menuButton.addEventListener("click", function () {
 
             navLinks.classList.toggle("active");
 
-            if (navLinks.classList.contains("active")) {
-                menuButton.innerHTML = "✕";
-            } else {
-                menuButton.innerHTML = "☰";
-            }
+            const isOpen =
+                navLinks.classList.contains("active");
+
+            menuButton.innerHTML =
+                isOpen ? "✕" : "☰";
+
+            menuButton.setAttribute(
+                "aria-label",
+                isOpen ? "Close menu" : "Open menu"
+            );
 
         });
+
+
+        navLinks.querySelectorAll("a")
+            .forEach(function (link) {
+
+                link.addEventListener("click", function () {
+
+                    navLinks.classList.remove("active");
+
+                    menuButton.innerHTML = "☰";
+
+                    menuButton.setAttribute(
+                        "aria-label",
+                        "Open menu"
+                    );
+
+                });
+
+            });
 
     }
 
 
-    /* ================= CLOSE MOBILE MENU ================= */
+    /* ================= DARK MODE ================= */
 
-    document.querySelectorAll(".nav-links a").forEach(function (link) {
+    const themeToggle =
+        document.getElementById("themeToggle");
 
-        link.addEventListener("click", function () {
+    const savedTheme =
+        localStorage.getItem("rupomTheme");
 
-            navLinks.classList.remove("active");
-
-            if (menuButton) {
-                menuButton.innerHTML = "☰";
-            }
-
-        });
-
-    });
-
-
-    /* ================= DARK / LIGHT MODE ================= */
-
-    const themeToggle = document.getElementById("themeToggle");
-
-    const savedTheme = localStorage.getItem("rupomTheme");
 
     if (savedTheme === "light") {
 
         document.body.classList.add("light-mode");
 
-        themeToggle.innerHTML = "☀️";
+        if (themeToggle) {
+            themeToggle.innerHTML = "☀️";
+        }
 
     }
 
@@ -61,35 +104,37 @@
 
             document.body.classList.toggle("light-mode");
 
-            if (document.body.classList.contains("light-mode")) {
+            const lightMode =
+                document.body.classList.contains("light-mode");
 
-                themeToggle.innerHTML = "☀️";
 
-                localStorage.setItem("rupomTheme", "light");
+            themeToggle.innerHTML =
+                lightMode ? "☀️" : "🌙";
 
-            } else {
 
-                themeToggle.innerHTML = "🌙";
-
-                localStorage.setItem("rupomTheme", "dark");
-
-            }
+            localStorage.setItem(
+                "rupomTheme",
+                lightMode ? "light" : "dark"
+            );
 
         });
 
     }
 
 
-    /* ================= TYPING ANIMATION ================= */
+    /* ================= TYPING EFFECT ================= */
 
-    const typingText = document.getElementById("typingText");
+    const typingText =
+        document.getElementById("typingText");
+
 
     const words = [
-        "ASP.NET Web Developer",
         "Web Developer",
-        "Programmer",
+        "Frontend Developer",
+        "ASP.NET Developer",
         "Creative Developer"
     ];
+
 
     let wordIndex = 0;
     let charIndex = 0;
@@ -103,13 +148,17 @@
         }
 
 
-        const currentWord = words[wordIndex];
+        const currentWord =
+            words[wordIndex];
 
 
         if (!deleting) {
 
             typingText.textContent =
-                currentWord.substring(0, charIndex + 1);
+                currentWord.substring(
+                    0,
+                    charIndex + 1
+                );
 
             charIndex++;
 
@@ -118,7 +167,10 @@
 
                 deleting = true;
 
-                setTimeout(typeEffect, 1600);
+                setTimeout(
+                    typeEffect,
+                    1500
+                );
 
                 return;
 
@@ -127,7 +179,10 @@
         } else {
 
             typingText.textContent =
-                currentWord.substring(0, charIndex - 1);
+                currentWord.substring(
+                    0,
+                    charIndex - 1
+                );
 
             charIndex--;
 
@@ -149,7 +204,7 @@
 
         setTimeout(
             typeEffect,
-            deleting ? 50 : 100
+            deleting ? 50 : 95
         );
 
     }
@@ -166,15 +221,28 @@
 
     window.addEventListener("scroll", function () {
 
+        if (!scrollProgress) {
+            return;
+        }
+
+
         const scrollTop =
             window.scrollY;
+
 
         const documentHeight =
             document.documentElement.scrollHeight -
             document.documentElement.clientHeight;
 
+
+        if (documentHeight <= 0) {
+            return;
+        }
+
+
         const percentage =
             (scrollTop / documentHeight) * 100;
+
 
         scrollProgress.style.width =
             percentage + "%";
@@ -188,39 +256,51 @@
         document.querySelectorAll(".reveal");
 
 
-    const revealObserver =
-        new IntersectionObserver(
+    if ("IntersectionObserver" in window) {
 
-            function (entries) {
+        const revealObserver =
+            new IntersectionObserver(
 
-                entries.forEach(function (entry) {
+                function (entries) {
 
-                    if (entry.isIntersecting) {
+                    entries.forEach(function (entry) {
 
-                        entry.target.classList.add("show");
+                        if (entry.isIntersecting) {
 
-                        revealObserver.unobserve(
-                            entry.target
-                        );
+                            entry.target.classList.add("show");
 
-                    }
+                            revealObserver.unobserve(
+                                entry.target
+                            );
 
-                });
+                        }
 
-            },
+                    });
 
-            {
-                threshold: 0.15
-            }
+                },
 
-        );
+                {
+                    threshold: 0.12
+                }
+
+            );
 
 
-    revealElements.forEach(function (element) {
+        revealElements.forEach(function (element) {
 
-        revealObserver.observe(element);
+            revealObserver.observe(element);
 
-    });
+        });
+
+    } else {
+
+        revealElements.forEach(function (element) {
+
+            element.classList.add("show");
+
+        });
+
+    }
 
 
     /* ================= SKILL PROGRESS ================= */
@@ -228,128 +308,50 @@
     const skillSection =
         document.getElementById("skills");
 
+
     const progressBars =
         document.querySelectorAll(".progress-bar");
 
 
-    const skillObserver =
-        new IntersectionObserver(
+    if (
+        skillSection &&
+        "IntersectionObserver" in window
+    ) {
 
-            function (entries) {
-
-                entries.forEach(function (entry) {
-
-                    if (entry.isIntersecting) {
-
-                        progressBars.forEach(function (bar) {
-
-                            bar.style.width =
-                                bar.getAttribute("data-width");
-
-                        });
-
-                        skillObserver.disconnect();
-
-                    }
-
-                });
-
-            },
-
-            {
-                threshold: 0.25
-            }
-
-        );
-
-
-    if (skillSection) {
-        skillObserver.observe(skillSection);
-    }
-
-
-    /* ================= STATISTICS ================= */
-
-    const statNumbers =
-        document.querySelectorAll(".stat-number");
-
-
-    let statsStarted = false;
-
-
-    function animateStats() {
-
-        if (statsStarted) {
-            return;
-        }
-
-        statsStarted = true;
-
-
-        statNumbers.forEach(function (counter) {
-
-            const target =
-                Number(counter.getAttribute("data-target"));
-
-            let current = 0;
-
-            const increment =
-                Math.max(1, Math.ceil(target / 60));
-
-
-            const timer =
-                setInterval(function () {
-
-                    current += increment;
-
-
-                    if (current >= target) {
-
-                        current = target;
-
-                        clearInterval(timer);
-
-                    }
-
-
-                    counter.textContent =
-                        current;
-
-                }, 25);
-
-        });
-
-    }
-
-
-    const statsSection =
-        document.querySelector(".stats-section");
-
-
-    if (statsSection) {
-
-        const statsObserver =
+        const skillObserver =
             new IntersectionObserver(
 
                 function (entries) {
 
                     if (entries[0].isIntersecting) {
 
-                        animateStats();
+                        progressBars.forEach(function (bar) {
 
-                        statsObserver.disconnect();
+                            const width =
+                                bar.getAttribute(
+                                    "data-width"
+                                );
+
+                            bar.style.width =
+                                width || "0%";
+
+                        });
+
+
+                        skillObserver.disconnect();
 
                     }
 
                 },
 
                 {
-                    threshold: 0.3
+                    threshold: 0.2
                 }
 
             );
 
-        statsObserver.observe(statsSection);
+
+        skillObserver.observe(skillSection);
 
     }
 
@@ -358,6 +360,7 @@
 
     const filterButtons =
         document.querySelectorAll(".filter-btn");
+
 
     const projects =
         document.querySelectorAll(".project-card");
@@ -378,33 +381,216 @@
 
 
             const filter =
-                button.getAttribute("data-filter");
+                button.getAttribute(
+                    "data-filter"
+                );
 
 
             projects.forEach(function (project) {
 
                 const category =
-                    project.getAttribute("data-category");
+                    project.getAttribute(
+                        "data-category"
+                    );
 
 
-                if (
+                const shouldShow =
                     filter === "all" ||
-                    category === filter
-                ) {
+                    category === filter;
 
-                    project.style.display = "block";
 
-                } else {
-
-                    project.style.display = "none";
-
-                }
+                project.style.display =
+                    shouldShow ? "" : "none";
 
             });
 
         });
 
     });
+
+
+    /* ================= PROJECT MODAL ================= */
+
+    const projectModal =
+        document.getElementById("projectModal");
+
+
+    const modalClose =
+        document.getElementById("modalClose");
+
+
+    const modalTitle =
+        document.getElementById("modalTitle");
+
+
+    const modalDescription =
+        document.getElementById("modalDescription");
+
+
+    const modalTag =
+        document.getElementById("modalTag");
+
+
+    const modalTech =
+        document.getElementById("modalTech");
+
+
+    const projectData = {
+
+        ecommerce: {
+
+            tag: "PRACTICE PROJECT",
+
+            title: "E-Commerce Website",
+
+            description:
+                "A practice e-commerce interface created to demonstrate responsive layout, product presentation, navigation and modern web design.",
+
+            tech:
+                "HTML • CSS • JavaScript"
+
+        },
+
+
+        student: {
+
+            tag: "PRACTICE PROJECT",
+
+            title: "Student Management System",
+
+            description:
+                "A practice management concept for organising student information, academic records and structured database-driven content.",
+
+            tech:
+                "ASP.NET Core • C# • SQL"
+
+        },
+
+
+        portfolio: {
+
+            tag: "PERSONAL PROJECT",
+
+            title: "Personal Portfolio",
+
+            description:
+                "A responsive personal portfolio designed to present my background, skills, learning journey and development work.",
+
+            tech:
+                "HTML • CSS • JavaScript"
+
+        }
+
+    };
+
+
+    document.querySelectorAll(".project-link")
+        .forEach(function (button) {
+
+            button.addEventListener("click", function () {
+
+                const projectKey =
+                    button.getAttribute(
+                        "data-project"
+                    );
+
+
+                const data =
+                    projectData[projectKey];
+
+
+                if (!data || !projectModal) {
+                    return;
+                }
+
+
+                modalTag.textContent =
+                    data.tag;
+
+
+                modalTitle.textContent =
+                    data.title;
+
+
+                modalDescription.textContent =
+                    data.description;
+
+
+                modalTech.textContent =
+                    data.tech;
+
+
+                projectModal.classList.add("show");
+
+                document.body.classList.add(
+                    "no-scroll"
+                );
+
+            });
+
+        });
+
+
+    function closeProjectModal() {
+
+        if (!projectModal) {
+            return;
+        }
+
+
+        projectModal.classList.remove("show");
+
+        document.body.classList.remove(
+            "no-scroll"
+        );
+
+    }
+
+
+    if (modalClose) {
+
+        modalClose.addEventListener(
+            "click",
+            closeProjectModal
+        );
+
+    }
+
+
+    if (projectModal) {
+
+        projectModal.addEventListener(
+            "click",
+            function (event) {
+
+                if (
+                    event.target === projectModal
+                ) {
+
+                    closeProjectModal();
+
+                }
+
+            }
+        );
+
+    }
+
+
+    document.addEventListener(
+        "keydown",
+        function (event) {
+
+            if (
+                event.key === "Escape"
+            ) {
+
+                closeProjectModal();
+
+            }
+
+        }
+    );
 
 
     /* ================= BACK TO TOP ================= */
@@ -414,6 +600,11 @@
 
 
     window.addEventListener("scroll", function () {
+
+        if (!backToTop) {
+            return;
+        }
+
 
         if (window.scrollY > 500) {
 
@@ -430,106 +621,21 @@
 
     if (backToTop) {
 
-        backToTop.addEventListener("click", function () {
+        backToTop.addEventListener(
+            "click",
+            function () {
 
-            window.scrollTo({
-                top: 0,
-                behavior: "smooth"
-            });
+                window.scrollTo({
 
-        });
+                    top: 0,
 
-    }
+                    behavior: "smooth"
 
-
-    /* ================= DOWNLOAD PROFILE ================= */
-
-    const downloadProfile =
-        document.getElementById("downloadProfile");
-
-
-    if (downloadProfile) {
-
-        downloadProfile.addEventListener("click", function () {
-
-            window.print();
-
-        });
-
-    }
-
-
-    /* ================= CONTACT FORM ================= */
-
-    const contactForm =
-        document.getElementById("contactForm");
-
-    const formMessage =
-        document.getElementById("formMessage");
-
-
-    if (contactForm) {
-
-        contactForm.addEventListener("submit", function (event) {
-
-            event.preventDefault();
-
-
-            const name =
-                document.getElementById("name").value.trim();
-
-            const email =
-                document.getElementById("email").value.trim();
-
-            const phone =
-                document.getElementById("phone").value.trim();
-
-            const message =
-                document.getElementById("message").value.trim();
-
-
-            if (
-                name === "" ||
-                email === "" ||
-                phone === "" ||
-                message === ""
-            ) {
-
-                formMessage.textContent =
-                    "Please fill in all fields.";
-
-                return;
+                });
 
             }
-
-
-            formMessage.textContent =
-                "✓ Message information is ready. Thank you!";
-
-
-            /*
-             * This is currently a front-end demo form.
-             * To actually receive messages,
-             * connect this form to an ASP.NET Controller
-             * and database/email service.
-             */
-
-
-            contactForm.reset();
-
-
-            document.getElementById("name").value =
-                "Mr Rupom Ahmed";
-
-            document.getElementById("email").value =
-                "rupom129@gmail.com";
-
-            document.getElementById("phone").value =
-                "01991003861";
-
-        });
+        );
 
     }
-
 
 });
