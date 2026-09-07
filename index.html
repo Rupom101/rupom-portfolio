@@ -4,869 +4,1225 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Mr Rupom Ahmed</title>
+    <meta name="description"
+          content="Mr Rupom Ahmed — Web Developer portfolio showcasing web development skills, projects and professional profile.">
+
+    <meta name="author"
+          content="Mr Rupom Ahmed">
+
+    <title>Mr Rupom Ahmed | Web Developer</title>
 
     <link rel="stylesheet" href="site.css">
+
 </head>
-
 <body>
+    <!-- ================= PAGE LOADER ================= -->
 
-<!-- ================= HERO ================= -->
+    <div id="pageLoader">
 
-<section id="home" class="hero section-padding">
+        <div class="loader-content">
 
-    <div class="hero-content reveal">
+            <div class="loader-ring"></div>
 
-        <p class="small-title">
-            WELCOME TO MY PORTFOLIO
-        </p>
-
-        <h1>
-            Hi, I'm
-            <span>Mr Rupom Ahmed</span>
-        </h1>
-
-        <h2>
-            <span id="typingText">ASP.NET Web Developer</span>
-        </h2>
-
-        <p class="hero-description">
-            I am a passionate Web Developer who loves creating
-            modern, responsive and user-friendly web applications.
-
-            I enjoy learning new technologies and building
-            useful digital solutions.
-        </p>
-
-        <div class="hero-buttons">
-
-            <a href="#projects" class="btn primary-btn">
-                View My Projects
-            </a>
-
-            <a href="#contact" class="btn secondary-btn">
-                Contact Me
-            </a>
-
-        </div>
-
-        <div class="social-links">
-
-            <a href="https://www.facebook.com/mdrupomahmed.rj?mibextid=ZbWKwL"
-               target="_blank"
-               rel="noopener noreferrer">
-                Facebook
-            </a>
-
-            <a href="mailto:rupom129@gmail.com">
-                Email
-            </a>
-
-            <a href="https://wa.me/8801991003861?text=Hello%20Mr%20Rupom%20Ahmed%2C%20I%20visited%20your%20profile%20website."
-               target="_blank"
-               rel="noopener noreferrer">
-                WhatsApp
-            </a>
-
-        </div>
-
-    </div>
-
-    <div class="profile-area reveal">
-
-        <div class="profile-glow">
-
-            <img src="rupom.jpg"
-                 alt="Mr Rupom Ahmed"
-                 class="profile-photo"
-                 onerror="this.style.display='none'; document.getElementById('photoFallback').style.display='flex';">
-
-            <div id="photoFallback" class="photo-fallback">
+            <div class="loader-logo">
                 RA
             </div>
 
-        </div>
+            <p>
+                Welcome to my portfolio
+            </p>
 
-        <div class="floating-card card-one">
-            <strong>ASP.NET Core 8</strong>
-            <small>Developer</small>
-        </div>
-
-        <div class="floating-card card-two">
-            <strong>Web</strong>
-            <small>Developer</small>
         </div>
 
     </div>
 
-</section>
+
+    <!-- ================= SCROLL PROGRESS ================= -->
+
+    <div id="scrollProgress"></div>
 
 
-<!-- ================= ABOUT ================= -->
+    <!-- ================= BACKGROUND ================= -->
 
-<section id="about" class="section-padding section-dark">
+    <div class="background-animation">
 
-    <div class="section-heading reveal">
-
-        <p>GET TO KNOW ME</p>
-
-        <h2>
-            About <span>Me</span>
-        </h2>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
 
     </div>
 
-    <div class="about-grid">
 
-        <div class="about-box reveal">
+    <!-- ================= NAVBAR ================= -->
 
-            <div class="code-icon">
-                &lt;/&gt;
+    <header id="header">
+
+        <nav class="navbar">
+
+            <a href="#home" class="logo">
+                RA<span>.</span>
+            </a>
+
+
+            <ul class="nav-links" id="navLinks">
+
+                <li>
+                    <a href="#home">Home</a>
+                </li>
+
+                <li>
+                    <a href="#about">About</a>
+                </li>
+
+                <li>
+                    <a href="#education">Education</a>
+                </li>
+
+                <li>
+                    <a href="#skills">Skills</a>
+                </li>
+
+                <li>
+                    <a href="#services">Services</a>
+                </li>
+
+                <li>
+                    <a href="#projects">Projects</a>
+                </li>
+
+                <li>
+                    <a href="#contact">Contact</a>
+                </li>
+
+            </ul>
+
+
+            <div class="nav-buttons">
+
+                <button id="themeToggle"
+                        class="icon-button"
+                        aria-label="Toggle dark mode">
+
+                    🌙
+
+                </button>
+
+
+                <button id="menuButton"
+                        class="menu-button"
+                        aria-label="Open menu">
+
+                    ☰
+
+                </button>
+
             </div>
 
-        </div>
+        </nav>
 
-        <div class="about-content reveal">
+    </header>
 
-            <h3>Web Site Developer</h3>
 
-            <p>
-                Hello! I am <strong>Mr Rupom Ahmed</strong>,
-                an Web Site Developer interested in building
-                modern and responsive web applications.
-            </p>
+    <!-- ================= HERO ================= -->
 
-            <p>
-                I enjoy programming, learning new technologies,
-                solving problems and developing creative web solutions.
-            </p>
+    <main>
 
-            <div class="personal-info">
+        <section id="home" class="hero section-padding">
 
-                <div>
-                    <strong>Name</strong>
-                    <span>Mr Rupom Ahmed</span>
+
+            <!-- HERO CONTENT -->
+
+            <div class="hero-content reveal">
+
+                <div class="availability-badge">
+
+                    <span class="status-dot"></span>
+
+                    Available for Web Projects
+
                 </div>
 
-                <div>
-                    <strong>Profession</strong>
-                    <span>Web Site Developer</span>
-                </div>
 
-                <div>
-                    <strong>University</strong>
-                    <span>Jatiya Kabi Kazi Nazrul Islam University</span>
-                </div>
-
-                <div>
-                    <strong>Location</strong>
-                    <span>Bangladesh</span>
-                </div>
-
-            </div>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-<!-- ================= EDUCATION ================= -->
-
-<section id="education" class="section-padding">
-
-    <div class="section-heading reveal">
-
-        <p>MY JOURNEY</p>
-
-        <h2>
-            Education <span>Timeline</span>
-        </h2>
-
-    </div>
-
-    <div class="timeline">
-
-        <div class="timeline-item reveal">
-
-            <div class="timeline-dot"></div>
-
-            <div class="timeline-content">
-
-                <span>2014</span>
-
-                <h3>SSC</h3>
-
-                <p>Secondary School Certificate</p>
-
-            </div>
-
-        </div>
-
-        <div class="timeline-item reveal">
-
-            <div class="timeline-dot"></div>
-
-            <div class="timeline-content">
-
-                <span>2016</span>
-
-                <h3>HSC</h3>
-
-                <p>Higher Secondary Certificate</p>
-
-            </div>
-
-        </div>
-
-        <div class="timeline-item reveal">
-
-            <div class="timeline-dot"></div>
-
-            <div class="timeline-content">
-
-                <span>University</span>
-
-                <h3>
-                    Jatiya Kabi Kazi Nazrul Islam University
-                </h3>
-
-                <p>Higher Education</p>
-
-            </div>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-<!-- ================= TRAINING ================= -->
-
-<section id="experience" class="section-padding section-dark">
-
-    <div class="section-heading reveal">
-
-        <p>LEARNING & TRAINING</p>
-
-        <h2>
-            Training & <span>Experience</span>
-        </h2>
-
-    </div>
-
-    <div class="training-grid">
-
-        <div class="training-card reveal">
-
-            <div class="training-number">01</div>
-
-            <h3>Tech IT BD</h3>
-
-            <p>
-                IT and technology related learning
-                and professional development.
-            </p>
-
-        </div>
-
-        <div class="training-card reveal">
-
-            <div class="training-number">02</div>
-
-            <h3>Programming Hero</h3>
-
-            <p>
-                Programming and web development
-                learning experience.
-            </p>
-
-        </div>
-
-        <div class="training-card reveal">
-
-            <div class="training-number">03</div>
-
-            <h3>Dream IT</h3>
-
-            <p>
-                Technology and web development
-                related training.
-            </p>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-<!-- ================= SKILLS ================= -->
-
-<section id="skills" class="section-padding">
-
-    <div class="section-heading reveal">
-
-        <p>MY EXPERTISE</p>
-
-        <h2>
-            My <span>Skills</span>
-        </h2>
-
-    </div>
-
-    <div class="skills-container">
-
-        <div class="skill reveal">
-
-            <div class="skill-info">
-                <span>ASP.NET Core 8</span>
-                <strong>90%</strong>
-            </div>
-
-            <div class="progress">
-                <div class="progress-bar" data-width="90%"></div>
-            </div>
-
-        </div>
-
-        <div class="skill reveal">
-
-            <div class="skill-info">
-                <span>C#</span>
-                <strong>80%</strong>
-            </div>
-
-            <div class="progress">
-                <div class="progress-bar" data-width="80%"></div>
-            </div>
-
-        </div>
-
-        <div class="skill reveal">
-
-            <div class="skill-info">
-                <span>HTML & CSS</span>
-                <strong>90%</strong>
-            </div>
-
-            <div class="progress">
-                <div class="progress-bar" data-width="90%"></div>
-            </div>
-
-        </div>
-
-        <div class="skill reveal">
-
-            <div class="skill-info">
-                <span>JavaScript</span>
-                <strong>75%</strong>
-            </div>
-
-            <div class="progress">
-                <div class="progress-bar" data-width="70%"></div>
-            </div>
-
-        </div>
-
-        <div class="skill reveal">
-
-            <div class="skill-info">
-                <span>SQL / Database</span>
-                <strong>80%</strong>
-            </div>
-
-            <div class="progress">
-                <div class="progress-bar" data-width="80%"></div>
-            </div>
-
-        </div>
-
-        <div class="skill reveal">
-
-            <div class="skill-info">
-                <span>Responsive Design</span>
-                <strong>85%</strong>
-            </div>
-
-            <div class="progress">
-                <div class="progress-bar" data-width="85%"></div>
-            </div>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-<!-- ================= SERVICES ================= -->
-
-<section id="services" class="section-padding section-dark">
-
-    <div class="section-heading reveal">
-
-        <p>WHAT I CAN DO</p>
-
-        <h2>
-            My <span>Services</span>
-        </h2>
-
-    </div>
-
-    <div class="services-grid">
-
-        <div class="service-card reveal">
-
-            <div class="service-icon">&lt;/&gt;</div>
-
-            <h3>Web Development</h3>
-
-            <p>
-                Modern, responsive and user-friendly
-                website development.
-            </p>
-
-        </div>
-
-        <div class="service-card reveal">
-
-            <div class="service-icon">ASP</div>
-
-            <h3>ASP.NET Core 8 Development</h3>
-
-            <p>
-                Dynamic web applications using
-                ASP.NET technologies.
-            </p>
-
-        </div>
-
-        <div class="service-card reveal">
-
-            <div class="service-icon">UI</div>
-
-            <h3>Frontend Development</h3>
-
-            <p>
-                Clean and attractive interfaces
-                using HTML, CSS and JavaScript.
-            </p>
-
-        </div>
-
-        <div class="service-card reveal">
-
-            <div class="service-icon">DB</div>
-
-            <h3>Database Integration</h3>
-
-            <p>
-                Database-connected web applications
-                and data management solutions.
-            </p>
-
-        </div>
-
-        <div class="service-card reveal">
-
-            <div class="service-icon">📱</div>
-
-            <h3>Responsive Design</h3>
-
-            <p>
-                Websites that work beautifully
-                on mobile, tablet and desktop.
-            </p>
-
-        </div>
-
-        <div class="service-card reveal">
-
-            <div class="service-icon">⚙</div>
-
-            <h3>Website Maintenance</h3>
-
-            <p>
-                Website updates, improvements
-                and maintenance.
-            </p>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-<!-- ================= STATISTICS ================= -->
-
-<section class="stats-section section-padding">
-
-    <div class="stats-grid">
-
-        <div class="stat-card reveal">
-
-            <div class="stat-number" data-target="6">0</div>
-
-            <p>Core Skills</p>
-
-        </div>
-
-        <div class="stat-card reveal">
-
-            <div class="stat-number" data-target="3">0</div>
-
-            <p>Training</p>
-
-        </div>
-
-        <div class="stat-card reveal">
-
-            <div class="stat-number" data-target="6">0</div>
-
-            <p>Services</p>
-
-        </div>
-
-        <div class="stat-card reveal">
-
-            <div class="stat-number" data-target="100">0</div>
-
-            <p>Passion %</p>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-<!-- ================= PROJECTS ================= -->
-
-<section id="projects" class="section-padding">
-
-    <div class="section-heading reveal">
-
-        <p>MY WORK</p>
-
-        <h2>
-            Project <span>Showcase</span>
-        </h2>
-
-        <small>Demo / Sample Projects</small>
-
-    </div>
-
-    <div class="project-filter">
-
-        <button class="filter-btn active" data-filter="all">
-            All
-        </button>
-
-        <button class="filter-btn" data-filter="asp">
-            ASP.NET
-        </button>
-
-        <button class="filter-btn" data-filter="web">
-            Web
-        </button>
-
-        <button class="filter-btn" data-filter="database">
-            Database
-        </button>
-
-    </div>
-
-    <div class="projects-grid">
-
-        <div class="project-card reveal" data-category="asp">
-
-            <div class="project-image project-one">
-                <span>E-COMMERCE</span>
-            </div>
-
-            <div class="project-content">
-
-                <span class="project-tag">ASP.NET</span>
-
-                <h3>E-Commerce Website</h3>
-
-                <p>
-                    Demo online shopping website
-                    with products, categories and
-                    responsive interface.
+                <p class="small-title">
+                    WELCOME TO MY DIGITAL PORTFOLIO
                 </p>
 
-                <div class="tech">
-                    ASP.NET • C# • SQL
-                </div>
 
-                <a href="#" class="project-link">
-                    Demo Project →
-                </a>
+                <h1>
 
-            </div>
+                    Hi, I'm
 
-        </div>
+                    <span>
+                        Mr Rupom Ahmed
+                    </span>
 
-        <div class="project-card reveal" data-category="database">
+                </h1>
 
-            <div class="project-image project-two">
-                <span>STUDENT SYSTEM</span>
-            </div>
 
-            <div class="project-content">
+                <h2>
 
-                <span class="project-tag">DATABASE</span>
+                    <span id="typingText">
+                        Web Developer
+                    </span>
 
-                <h3>Student Management System</h3>
+                </h2>
 
-                <p>
-                    Demo system for managing
-                    student information and records.
+
+                <p class="hero-description">
+
+                    I create modern, responsive and user-friendly
+                    websites with a focus on clean design,
+                    practical solutions and great user experience.
+
                 </p>
 
-                <div class="tech">
-                    ASP.NET • SQL • C#
+
+                <div class="hero-buttons">
+
+                    <a href="#projects"
+                       class="btn primary-btn">
+
+                        Explore My Work
+                        <span>→</span>
+
+                    </a>
+
+
+                    <a href="#contact"
+                       class="btn secondary-btn">
+
+                        Let's Connect
+
+                    </a>
+
                 </div>
 
-                <a href="#" class="project-link">
-                    Demo Project →
-                </a>
+
+                <!-- SOCIAL LINKS -->
+
+                <div class="social-links">
+
+                    <a href="https://github.com/Rupom101"
+                       target="_blank"
+                       rel="noopener noreferrer">
+
+                        GitHub
+
+                    </a>
+
+
+                    <a href="https://www.facebook.com/mdrupomahmed.rj?mibextid=ZbWKwL"
+                       target="_blank"
+                       rel="noopener noreferrer">
+
+                        Facebook
+
+                    </a>
+
+
+                    <a href="mailto:rupom129@gmail.com">
+
+                        Email
+
+                    </a>
+
+
+                    <a href="https://wa.me/8801991003861?text=Hello%20Mr%20Rupom%20Ahmed%2C%20I%20visited%20your%20portfolio."
+                       target="_blank"
+                       rel="noopener noreferrer">
+
+                        WhatsApp
+
+                    </a>
+
+                </div>
 
             </div>
 
-        </div>
 
-        <div class="project-card reveal" data-category="web">
+            <!-- ================= PROFILE ================= -->
 
-            <div class="project-image project-three">
-                <span>PORTFOLIO</span>
+            <div class="profile-area reveal">
+
+
+                <div class="profile-orbit orbit-one"></div>
+
+                <div class="profile-orbit orbit-two"></div>
+
+
+                <div class="profile-glow">
+
+
+                    <div class="profile-inner">
+
+                        <img src="rupom.jpg"
+                             alt="Mr Rupom Ahmed — Web Developer"
+                             class="profile-photo"
+                             onerror="this.style.display='none'; document.getElementById('photoFallback').style.display='flex';">
+
+
+                        <div id="photoFallback"
+                             class="photo-fallback">
+
+                            RA
+
+                        </div>
+
+                    </div>
+
+
+                </div>
+
+
+                <!-- FLOATING CARD -->
+
+                <div class="floating-card card-one">
+
+                    <span class="floating-icon">
+                        &lt;/&gt;
+                    </span>
+
+                    <div>
+
+                        <strong>
+                            Web Development
+                        </strong>
+
+                        <small>
+                            Modern & Responsive
+                        </small>
+
+                    </div>
+
+                </div>
+
+
+                <div class="floating-card card-two">
+
+                    <span class="floating-icon">
+                        ⚡
+                    </span>
+
+                    <div>
+
+                        <strong>
+                            ASP.NET Core
+                        </strong>
+
+                        <small>
+                            Web Technology
+                        </small>
+
+                    </div>
+
+                </div>
+
+
             </div>
 
-            <div class="project-content">
+        </section>
 
-                <span class="project-tag">WEB</span>
 
-                <h3>Personal Portfolio</h3>
+        <!-- ================= ABOUT ================= -->
+
+        <section id="about"
+                 class="section-padding section-dark">
+
+            <div class="section-heading reveal">
 
                 <p>
-                    Modern responsive portfolio
-                    website for a web developer.
+                    GET TO KNOW ME
                 </p>
 
-                <div class="tech">
-                    HTML • CSS • JavaScript
-                </div>
-
-                <a href="#" class="project-link">
-                    Demo Project →
-                </a>
+                <h2>
+                    About <span>Me</span>
+                </h2>
 
             </div>
 
-        </div>
 
-    </div>
-
-</section>
+            <div class="about-grid">
 
 
-<!-- ================= WHATSAPP ================= -->
+                <div class="about-box reveal">
 
-<section class="whatsapp-section section-padding">
+                    <div class="about-initials">
+                        RA
+                    </div>
 
-    <div class="whatsapp-box reveal">
+                    <span>
+                        Web Developer
+                    </span>
 
-        <div class="whatsapp-icon">
-            ☎
-        </div>
-
-        <div>
-
-            <p>Let's talk on WhatsApp</p>
-
-            <h3>01991003861</h3>
-
-        </div>
-
-        <a href="https://wa.me/8801991003861?text=Hello%20Mr%20Rupom%20Ahmed%2C%20I%20visited%20your%20profile%20website."
-           target="_blank"
-           rel="noopener noreferrer"
-           class="whatsapp-btn">
-
-            Chat on WhatsApp →
-
-        </a>
-
-    </div>
-
-</section>
+                </div>
 
 
-<!-- ================= CONTACT ================= -->
+                <div class="about-content reveal">
 
-<section id="contact" class="section-padding section-dark">
+                    <h3>
+                        Hello, I'm <span>Rupom</span>
+                    </h3>
 
-    <div class="section-heading reveal">
 
-        <p>GET IN TOUCH</p>
+                    <p>
 
-        <h2>
-            Contact <span>Me</span>
-        </h2>
+                        I’m a Web Developer with a background in
+                        Business Administration, passionate about
+                        creating modern, responsive and
+                        user-friendly websites.
 
-    </div>
+                    </p>
 
-    <div class="contact-grid">
 
-        <div class="contact-info reveal">
+                    <p>
 
-            <h3>Let's Work Together</h3>
+                        I enjoy learning web technologies,
+                        solving problems and turning ideas into
+                        practical digital experiences.
 
-            <p>
-                Have a project or idea?
-                Feel free to contact me.
+                    </p>
+
+
+                    <div class="personal-info">
+
+
+                        <div>
+
+                            <strong>
+                                Name
+                            </strong>
+
+                            <span>
+                                Mr Rupom Ahmed
+                            </span>
+
+                        </div>
+
+
+                        <div>
+
+                            <strong>
+                                Profession
+                            </strong>
+
+                            <span>
+                                Web Developer
+                            </span>
+
+                        </div>
+
+
+                        <div>
+
+                            <strong>
+                                Education
+                            </strong>
+
+                            <span>
+                                BBA in Management
+                            </span>
+
+                        </div>
+
+
+                        <div>
+
+                            <strong>
+                                University
+                            </strong>
+
+                            <span>
+                                Jatiya Kabi Kazi Nazrul Islam University
+                            </span>
+
+                        </div>
+
+
+                        <div>
+
+                            <strong>
+                                Location
+                            </strong>
+
+                            <span>
+                                Bangladesh
+                            </span>
+
+                        </div>
+
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= EDUCATION ================= -->
+
+        <section id="education"
+                 class="section-padding">
+
+            <div class="section-heading reveal">
+
+                <p>
+                    MY ACADEMIC JOURNEY
+                </p>
+
+                <h2>
+                    Education <span>Timeline</span>
+                </h2>
+
+            </div>
+
+
+            <div class="timeline">
+
+
+                <div class="timeline-item reveal">
+
+                    <div class="timeline-dot"></div>
+
+                    <div class="timeline-content">
+
+                        <span>
+                            2014
+                        </span>
+
+                        <h3>
+                            SSC
+                        </h3>
+
+                        <p>
+                            Nurul Amin Khan High School,
+                            Gouripur, Mymensingh
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="timeline-item reveal">
+
+                    <div class="timeline-dot"></div>
+
+                    <div class="timeline-content">
+
+                        <span>
+                            2016
+                        </span>
+
+                        <h3>
+                            HSC
+                        </h3>
+
+                        <p>
+                            Shahid Syed Nazrul Islam College,
+                            Mymensingh
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="timeline-item reveal">
+
+                    <div class="timeline-dot"></div>
+
+                    <div class="timeline-content">
+
+                        <span>
+                            2021
+                        </span>
+
+                        <h3>
+                            BBA in Management
+                        </h3>
+
+                        <p>
+                            Jatiya Kabi Kazi Nazrul Islam University
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= SKILLS ================= -->
+
+        <section id="skills"
+                 class="section-padding section-dark">
+
+            <div class="section-heading reveal">
+
+                <p>
+                    MY TOOLKIT
+                </p>
+
+                <h2>
+                    Technical <span>Skills</span>
+                </h2>
+
+            </div>
+
+
+            <div class="skills-container">
+
+
+                <div class="skill reveal">
+
+                    <div class="skill-info">
+
+                        <span>
+                            HTML5
+                        </span>
+
+                        <strong>
+                            Proficient
+                        </strong>
+
+                    </div>
+
+                    <div class="progress">
+
+                        <div class="progress-bar"
+                             data-width="90%">
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <div class="skill reveal">
+
+                    <div class="skill-info">
+
+                        <span>
+                            CSS3
+                        </span>
+
+                        <strong>
+                            Proficient
+                        </strong>
+
+                    </div>
+
+                    <div class="progress">
+
+                        <div class="progress-bar"
+                             data-width="88%">
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <div class="skill reveal">
+
+                    <div class="skill-info">
+
+                        <span>
+                            JavaScript
+                        </span>
+
+                        <strong>
+                            Intermediate
+                        </strong>
+
+                    </div>
+
+                    <div class="progress">
+
+                        <div class="progress-bar"
+                             data-width="75%">
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <div class="skill reveal">
+
+                    <div class="skill-info">
+
+                        <span>
+                            ASP.NET Core
+                        </span>
+
+                        <strong>
+                            Intermediate
+                        </strong>
+
+                    </div>
+
+                    <div class="progress">
+
+                        <div class="progress-bar"
+                             data-width="75%">
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <div class="skill reveal">
+
+                    <div class="skill-info">
+
+                        <span>
+                            C#
+                        </span>
+
+                        <strong>
+                            Intermediate
+                        </strong>
+
+                    </div>
+
+                    <div class="progress">
+
+                        <div class="progress-bar"
+                             data-width="70%">
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <div class="skill reveal">
+
+                    <div class="skill-info">
+
+                        <span>
+                            SQL
+                        </span>
+
+                        <strong>
+                            Intermediate
+                        </strong>
+
+                    </div>
+
+                    <div class="progress">
+
+                        <div class="progress-bar"
+                             data-width="70%">
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= SERVICES ================= -->
+
+        <section id="services"
+                 class="section-padding">
+
+            <div class="section-heading reveal">
+
+                <p>
+                    WHAT I CAN DO
+                </p>
+
+                <h2>
+                    My <span>Services</span>
+                </h2>
+
+            </div>
+
+
+            <div class="services-grid">
+
+
+                <div class="service-card reveal">
+
+                    <div class="service-icon">
+                        &lt;/&gt;
+                    </div>
+
+                    <h3>
+                        Web Development
+                    </h3>
+
+                    <p>
+                        Modern and responsive websites
+                        designed for a smooth user experience.
+                    </p>
+
+                </div>
+
+
+                <div class="service-card reveal">
+
+                    <div class="service-icon">
+                        UI
+                    </div>
+
+                    <h3>
+                        Frontend Development
+                    </h3>
+
+                    <p>
+                        Clean interfaces using HTML,
+                        CSS and JavaScript.
+                    </p>
+
+                </div>
+
+
+                <div class="service-card reveal">
+
+                    <div class="service-icon">
+                        DB
+                    </div>
+
+                    <h3>
+                        Database Integration
+                    </h3>
+
+                    <p>
+                        Structured data-driven web
+                        applications and database solutions.
+                    </p>
+
+                </div>
+
+
+                <div class="service-card reveal">
+
+                    <div class="service-icon">
+                        📱
+                    </div>
+
+                    <h3>
+                        Responsive Design
+                    </h3>
+
+                    <p>
+                        Websites that adapt beautifully
+                        to mobile, tablet and desktop.
+                    </p>
+
+                </div>
+
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= PROJECTS ================= -->
+
+        <section id="projects"
+                 class="section-padding section-dark">
+
+            <div class="section-heading reveal">
+
+                <p>
+                    PRACTICE & DEMO WORK
+                </p>
+
+                <h2>
+                    Project <span>Showcase</span>
+                </h2>
+
+                <small>
+                    Selected practice projects created
+                    to demonstrate my development skills.
+                </small>
+
+            </div>
+
+
+            <div class="project-filter">
+
+                <button class="filter-btn active"
+                        data-filter="all">
+                    All
+                </button>
+
+                <button class="filter-btn"
+                        data-filter="web">
+                    Web
+                </button>
+
+                <button class="filter-btn"
+                        data-filter="database">
+                    Database
+                </button>
+
+            </div>
+
+
+            <div class="projects-grid">
+
+
+                <article class="project-card reveal"
+                         data-category="web">
+
+
+                    <div class="project-image project-one">
+
+                        <span>
+                            E-COMMERCE
+                        </span>
+
+                    </div>
+
+
+                    <div class="project-content">
+
+                        <span class="project-tag">
+                            PRACTICE PROJECT
+                        </span>
+
+                        <h3>
+                            E-Commerce Website
+                        </h3>
+
+                        <p>
+                            A responsive shopping interface
+                            designed to demonstrate product
+                            browsing and modern web UI.
+                        </p>
+
+                        <div class="tech">
+                            HTML • CSS • JavaScript
+                        </div>
+
+                        <button class="project-link"
+                                data-project="ecommerce">
+
+                            View Details →
+
+                        </button>
+
+                    </div>
+
+                </article>
+
+
+                <article class="project-card reveal"
+                         data-category="database">
+
+
+                    <div class="project-image project-two">
+
+                        <span>
+                            STUDENT SYSTEM
+                        </span>
+
+                    </div>
+
+
+                    <div class="project-content">
+
+                        <span class="project-tag">
+                            PRACTICE PROJECT
+                        </span>
+
+                        <h3>
+                            Student Management System
+                        </h3>
+
+                        <p>
+                            A practice management interface
+                            for organising student information
+                            and academic records.
+                        </p>
+
+                        <div class="tech">
+                            ASP.NET Core • C# • SQL
+                        </div>
+
+                        <button class="project-link"
+                                data-project="student">
+
+                            View Details →
+
+                        </button>
+
+                    </div>
+
+                </article>
+
+
+                <article class="project-card reveal"
+                         data-category="web">
+
+
+                    <div class="project-image project-three">
+
+                        <span>
+                            PORTFOLIO
+                        </span>
+
+                    </div>
+
+
+                    <div class="project-content">
+
+                        <span class="project-tag">
+                            PERSONAL PROJECT
+                        </span>
+
+                        <h3>
+                            Personal Portfolio
+                        </h3>
+
+                        <p>
+                            A responsive personal portfolio
+                            designed to present my skills,
+                            learning journey and work.
+                        </p>
+
+                        <div class="tech">
+                            HTML • CSS • JavaScript
+                        </div>
+
+                        <button class="project-link"
+                                data-project="portfolio">
+
+                            View Details →
+
+                        </button>
+
+                    </div>
+
+                </article>
+
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= CONTACT ================= -->
+
+        <section id="contact"
+                 class="section-padding section-dark">
+
+            <div class="section-heading reveal">
+
+                <p>
+                    GET IN TOUCH
+                </p>
+
+                <h2>
+                    Contact <span>Me</span>
+                </h2>
+
+            </div>
+
+
+            <div class="contact-grid">
+
+
+                <div class="contact-info reveal">
+
+                    <h3>
+                        Let's Connect
+                    </h3>
+
+                    <p>
+                        Have an idea, question or web project?
+                        Feel free to get in touch.
+                    </p>
+
+
+                    <div class="contact-detail">
+
+                        <strong>
+                            Email
+                        </strong>
+
+                        <a href="mailto:rupom129@gmail.com">
+                            rupom129@gmail.com
+                        </a>
+
+                    </div>
+
+
+                    <div class="contact-detail">
+
+                        <strong>
+                            GitHub
+                        </strong>
+
+                        <a href="https://github.com/Rupom101"
+                           target="_blank"
+                           rel="noopener noreferrer">
+
+                            github.com/Rupom101
+
+                        </a>
+
+                    </div>
+
+
+                    <div class="contact-detail">
+
+                        <strong>
+                            WhatsApp
+                        </strong>
+
+                        <a href="https://wa.me/8801991003861"
+                           target="_blank"
+                           rel="noopener noreferrer">
+
+                            01991003861
+
+                        </a>
+
+                    </div>
+
+
+                    <div class="contact-detail">
+
+                        <strong>
+                            Facebook
+                        </strong>
+
+                        <a href="https://www.facebook.com/mdrupomahmed.rj?mibextid=ZbWKwL"
+                           target="_blank"
+                           rel="noopener noreferrer">
+
+                            Rupom Ahmed
+
+                        </a>
+
+                    </div>
+
+                </div>
+
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- ================= PROJECT MODAL ================= -->
+
+    <div id="projectModal"
+         class="project-modal">
+
+        <div class="modal-content">
+
+            <button id="modalClose"
+                    class="modal-close">
+
+                ✕
+
+            </button>
+
+
+            <span id="modalTag"
+                  class="project-tag">
+
+            </span>
+
+
+            <h2 id="modalTitle">
+            </h2>
+
+
+            <p id="modalDescription">
+
             </p>
 
-            <div class="contact-detail">
 
-                <strong>Email</strong>
-
-                <a href="mailto:rupom129@gmail.com">
-                    rupom129@gmail.com
-                </a>
-
-                <a href="mailto:rupomrj101@gmail.com">
-                    rupomrj101@gmail.com
-                </a>
+            <div id="modalTech"
+                 class="tech">
 
             </div>
 
-            <div class="contact-detail">
 
-                <strong>Phone / WhatsApp</strong>
+        </div>
 
-                <a href="tel:01991003861">
-                    01991003861
+    </div>
+
+
+    <!-- ================= BACK TO TOP ================= -->
+
+    <button id="backToTop"
+            aria-label="Back to top">
+
+        ↑
+
+    </button>
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer>
+
+        <div class="footer-content">
+
+            <h2>
+                Mr Rupom <span>Ahmed</span>
+            </h2>
+
+            <p>
+                Web Developer
+            </p>
+
+
+            <div class="footer-social">
+
+                <a href="https://github.com/Rupom101"
+                   target="_blank"
+                   rel="noopener noreferrer">
+                    GitHub
                 </a>
-
-            </div>
-
-            <div class="contact-detail">
-
-                <strong>Facebook</strong>
 
                 <a href="https://www.facebook.com/mdrupomahmed.rj?mibextid=ZbWKwL"
                    target="_blank"
                    rel="noopener noreferrer">
+                    Facebook
+                </a>
 
-                    Rupom Ahmed
-
+                <a href="mailto:rupom129@gmail.com">
+                    Email
                 </a>
 
             </div>
 
+
+            <p class="copyright">
+                © 2026 Mr Rupom Ahmed. All rights reserved.
+            </p>
+
         </div>
 
-
-        <form id="contactForm" class="contact-form reveal">
-
-            <div class="form-row">
-
-                <div class="input-group">
-
-                    <label>Your Name</label>
-
-                    <input type="text"
-                           id="name"
-                           value="Mr Rupom Ahmed"
-                           required>
-
-                </div>
-
-                <div class="input-group">
-
-                    <label>Your Email</label>
-
-                    <input type="email"
-                           id="email"
-                           value="rupom129@gmail.com"
-                           required>
-
-                </div>
-
-            </div>
-
-            <div class="input-group">
-
-                <label>Phone Number</label>
-
-                <input type="tel"
-                       id="phone"
-                       value="01991003861"
-                       required>
-
-            </div>
-
-            <div class="input-group">
-
-                <label>Message</label>
-
-                <textarea id="message"
-                          rows="6"
-                          placeholder="Write your message here..."
-                          required></textarea>
-
-            </div>
-
-            <button type="submit"
-                    class="btn primary-btn">
-
-                Send Message
-
-            </button>
-
-            <p id="formMessage" class="form-message"></p>
-
-        </form>
-
-    </div>
-
-</section>
+    </footer>
 
 
-<!-- ================= DOWNLOAD ================= -->
-
-<section class="download-section section-padding">
-
-    <div class="download-box reveal">
-
-        <p>LIKE MY PROFILE?</p>
-
-        <h2>Download My Profile</h2>
-
-        <p>
-            You can save this profile as a PDF
-            from your browser.
-        </p>
-
-        <button id="downloadProfile"
-                class="btn primary-btn">
-
-            📥 Download Profile
-
-        </button>
-
-    </div>
-
-</section>
-
-
-<script src="site.js"></script>
+    <script src="site.js"></script>
 
 </body>
 </html>
